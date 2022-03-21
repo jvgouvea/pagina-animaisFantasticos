@@ -6,7 +6,7 @@ Página desenvolvida com o objetivo de treinar JavaScript e GridLayout.
 
 ## 📌Acesso
 
-* [Link para acesso ao site](https://www.google.com/)
+* [Link para acesso ao site](#)
 
 ## 🛠️ Construído com
 

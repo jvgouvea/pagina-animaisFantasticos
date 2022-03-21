@@ -33,6 +33,10 @@ body {
   letter-spacing: 0.1em;
 }
 
+.header-menu li a:hover{
+  color: rgb(201, 71, 57);
+}
+
 .main {
   grid-column: 2/4;
 }

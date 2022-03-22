@@ -1,5 +1,9 @@
 @import "/css/reset.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #faf6ed;
   color: #222;

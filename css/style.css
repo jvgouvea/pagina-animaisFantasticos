@@ -229,6 +229,10 @@ body {
     gap: 0px;
   }
 
+  .grid-container .faq-perguntas {
+    grid-column: 1/-1;
+  }
+
   .grid-container h1 {
     font-size: 3rem;
     margin-bottom: 2rem;

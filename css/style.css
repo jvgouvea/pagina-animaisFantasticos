@@ -33,7 +33,7 @@ body {
   letter-spacing: 0.1em;
 }
 
-.header-menu li a:hover{
+.header-menu li a:hover {
   color: rgb(201, 71, 57);
 }
 
@@ -148,6 +148,11 @@ body {
   content: "⬏";
   display: inline-block;
   margin-left: 10px;
+  transition: 0.3s;
+}
+
+.faq-perguntas dt.setadown::after {
+  content: "⬎";
 }
 
 .faq-perguntas dd {
@@ -262,7 +267,7 @@ body {
   }
 }
 
-/* JavaScript */
+/* JavaScript lista de imagens */
 
 .js .js-tabcontent div {
   display: none;
@@ -273,6 +278,17 @@ body {
   animation: show 0.5s forwards;
 }
 
+/* JavaScript FAQ */
+
+.js .js-hidden dd {
+  display: none;
+}
+
+.js .js-hidden dd.ativo {
+  display: grid;
+  animation: showfaq 0.5s forwards;
+}
+
 @keyframes show {
   from {
     opacity: 0;
@@ -281,5 +297,14 @@ body {
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes showfaq {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

@@ -277,27 +277,27 @@ body {
 
 /* JavaScript lista de imagens */
 
-.js .js-tabcontent div {
+.js [data-anima="content"] div {
   display: none;
 }
 
-.js .js-tabcontent div.ativo {
+.js [data-anima="content"] div.ativo {
   display: grid;
-  animation: show 0.5s forwards;
+  animation: showTab 0.5s forwards;
 }
 
 /* JavaScript FAQ */
 
-.js .js-hidden dd {
+.js [data-anima='hidden'] dd {
   display: none;
 }
 
-.js .js-hidden dd.ativo {
+.js [data-anima='hidden']  dd.ativo {
   display: grid;
   animation: showfaq 0.5s forwards;
 }
 
-@keyframes show {
+@keyframes showTab {
   from {
     opacity: 0;
     transform: translate3d(-20px, 0, 0);
@@ -319,13 +319,13 @@ body {
 
 /* JavaScript animação no Scroll */
 
-.js .js-scroll{
+.js [data-anima="scroll"]{
   opacity: 0;
   transform: translate3d(-30px,0,0);
   transition: 0.3s;
 }
 
-.js .js-scroll.ativo{
+.js [data-anima="scroll"].ativo{
   opacity: 1;
   transform: translate3d(0,0,0);
 }

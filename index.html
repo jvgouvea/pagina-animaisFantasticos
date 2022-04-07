@@ -30,7 +30,7 @@
 
     <main class="main grid-container" id="animais">
       <h1>Animais <br> Fantásticos</h1>
-      <div class="lista-img js-tabmenu">
+      <div class="lista-img" data-anima="menu">
         <ul>
           <li><img src="img/imagem1.jpg" alt="Raposa"></li>
           <li><img src="img/imagem2.jpg" alt="Esquilo"></li>
@@ -40,7 +40,7 @@
           <li><img src="img/imagem6.jpg" alt="Leão"></li>
         </ul>
       </div>
-      <section class="grid-conteudo js-tabcontent">
+      <section class="grid-conteudo" data-anima="content">
         <div>
           <h2>Raposa</h2>
           <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
@@ -71,9 +71,9 @@
       </section>
     </main>
 
-    <article class="grid-container faq js-scroll" id="faq">
+    <article class="grid-container faq" data-anima="scroll" id="faq">
       <h1>FAQ</h1>
-      <dl class="faq-perguntas js-hidden">
+      <dl class="faq-perguntas" data-anima="hidden">
         <div>
           <dt>Qual a idade dos animais?</dt>
           <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
@@ -93,7 +93,7 @@
       </dl>
     </article>
 
-    <section class="grid-container numeros js-scroll">
+    <section class="grid-container numeros" data-anima="scroll">
       <h1>Números</h1>
       <div class="numeros-conteudo">
         <div>
@@ -115,7 +115,7 @@
       </div>
     </section>
 
-    <article class="grid-container js-scroll" id="contato">
+    <article class="grid-container" data-anima="scroll" id="contato">
       <h1>CONTATO</h1>
       <div class="contato-img">
         <img src="img/mapa.png" alt="Rua do Conde, nº 21
@@ -136,7 +136,7 @@
     </footer>
   </div>
 
-  <script src="js/script.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
 
 </html>

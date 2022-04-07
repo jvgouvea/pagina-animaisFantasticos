@@ -1,0 +1,329 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #faf6ed;
+  color: #222;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  background-color: #fb5;
+  grid-column: 3/-1;
+}
+
+.header-menu {
+  display: flex;
+  padding: 10px;
+}
+
+.header-menu li a {
+  display: block;
+  padding: 10px;
+  color: #222;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.header-menu li a:hover {
+  color: rgb(201, 71, 57);
+}
+
+.main {
+  grid-column: 2/4;
+}
+
+.grid-container {
+  display: grid;
+  grid-column: 2/4;
+  gap: 20px;
+  padding: 10px 20px;
+  grid-template-columns: 90px 300px 1fr;
+}
+
+.grid-container h1 {
+  grid-column: 1/4;
+  font-family: Playfair Display SC, georgia;
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.grid-container h2 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #e54;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.grid-container h2::before {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  width: 40px;
+  background-color: #fb5;
+}
+
+.lista-img {
+  grid-column: 2;
+  height: 370px;
+  overflow-y: auto;
+}
+
+.lista-img li {
+  cursor: pointer;
+}
+
+.lista-img::-webkit-scrollbar {
+  width: 16px;
+}
+
+.lista-img::-webkit-scrollbar-thumb {
+  background-color: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+
+.lista-img::-webkit-scrollbar-track {
+  background-color: #faf6ed;
+}
+
+.grid-conteudo h2 {
+  margin-bottom: 1rem;
+}
+
+.grid-conteudo p {
+  font-family: Helvetica, Arial;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.grid-conteudo {
+  grid-column: 3;
+}
+
+.grid-container .faq-perguntas {
+  grid-column: 2/4;
+}
+
+.faq {
+  margin-top: 4rem;
+}
+
+.faq-perguntas dt {
+  color: #e54;
+  font-family: IBM Plex Mono, monospace;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.faq-perguntas dt::before {
+  margin-right: 10px;
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 10px;
+  background-color: #fb5;
+}
+
+.faq-perguntas dt::after {
+  content: "⬏";
+  display: inline-block;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.faq-perguntas dt.setadown::after {
+  content: "⬎";
+}
+
+.faq-perguntas dd {
+  font-family: Helvetica, Arial;
+  margin-bottom: 0.5rem;
+  margin-left: 30px;
+}
+
+.numeros {
+  margin-top: 2rem;
+}
+
+.numeros-conteudo {
+  margin-top: 2rem;
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 0px;
+}
+
+.numeros-conteudo h3 {
+  font-family: Playfair Display SC;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.numeros-conteudo span {
+  color: #e54;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#contato {
+  margin-top: 4rem;
+}
+
+.contato-img {
+  grid-column: 2;
+}
+
+.contato-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato-lista li::before {
+  margin-right: 10px;
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 10px;
+  background-color: #fb5;
+}
+
+.footer {
+  grid-column: 3/-1;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  background-color: #fb5;
+  padding: 20px;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .grid,
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+    gap: 0px;
+  }
+
+  .grid-container .faq-perguntas {
+    grid-column: 1/-1;
+  }
+
+  .grid-container h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer,
+  .header,
+  .contato-img,
+  .contato-lista,
+  .numeros-conteudo {
+    grid-column: 1;
+  }
+
+  .header {
+    margin-top: 0;
+  }
+
+  .grid-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .grid-conteudo {
+    margin-left: 20px;
+  }
+
+  .numeros-conteudo span {
+    font-size: 1rem;
+  }
+
+  .footer {
+    margin-bottom: 0;
+  }
+
+  .grid-container#contato {
+    gap: 20px 0px;
+  }
+}
+
+/* JavaScript lista de imagens */
+
+.js [data-anima="content"] div {
+  display: none;
+}
+
+.js [data-anima="content"] div.ativo {
+  display: grid;
+  animation: showTab 0.5s forwards;
+}
+
+/* JavaScript FAQ */
+
+.js [data-anima="hidden"] dd {
+  display: none;
+}
+
+.js [data-anima="hidden"] dd.ativo {
+  display: grid;
+  animation: showfaq 0.5s forwards;
+}
+
+@keyframes showTab {
+  from {
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes showfaq {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* JavaScript animação no Scroll */
+
+.js [data-anima="scroll"] {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: 0.3s;
+}
+
+.js [data-anima="scroll"].ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
